@@ -1,5 +1,5 @@
 <div align=center><img width='800' height='210' src='https://github.com/SpeechFlow-io/Spoken_language_identification/blob/main/speechflow.jpg'></div>
-
+SpeechFlow is an advanced speech-to-text API that offers exceptional accuracy for businesses of all sizes and industries. With SpeechFlow, users can transcribe audio and video content into text with high precision, making it an ideal solution for companies that need to quickly and accurately convert speech into text for various purposes, such as captioning, transcription, and analysis. With support for multiple languages and dialects, SpeechFlow is a versatile tool that can cater to a wide range of businesses and industries.
 
  # Spoken_language_identification 
 * [Objective](#objective)
@@ -12,8 +12,8 @@
    * [Prepare your input data](#prepare-your-input-data)
    *  [Train model](#train-model)
    *  [Inference](#inference)
-* [Learing SpeechFlow](#learning-speechflow)
-* [ LICESES](#liceses)
+* [ LICENSE](#license)
+
 ## Objective 
 Spoken Language Identification (LID) is defined as detecting language from an audio clip by an unknown speaker, regardless of gender, manner of speaking, and distinct age speaker. It has numerous applications in speech recognition, multilingual machine translations, and speech-to-speech translations. 
 
@@ -82,9 +82,5 @@ If you don't have installed ffmpeg, please installed it first.
 sudo apt-get update
 sudo apt-get install ffmpeg
 ```
-
-## Learing SpeechFlow
-SpeechFlow is an advanced speech-to-text API that offers exceptional accuracy for businesses of all sizes and industries. With SpeechFlow, users can transcribe audio and video content into text with high precision, making it an ideal solution for companies that need to quickly and accurately convert speech into text for various purposes, such as captioning, transcription, and analysis. With support for multiple languages and dialects, SpeechFlow is a versatile tool that can cater to a wide range of businesses and industries.
-
-## LICESES
+## LICENSE
 Spoken_language_identification is released under the Apache License, version 2.0. The Apache license is a popular BSD-like license. Spoken_language_identification can be redistributed for free, even for commercial purposes, although you can not take off the license headers (and under some circumstances, you may have to distribute a license document).
