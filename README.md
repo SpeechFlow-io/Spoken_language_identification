@@ -40,7 +40,7 @@ python train.py
 ```
 This will train Spoken_language_identification model using data/demo_txt/demo_train.txt, then store the model on saved_weights folder, perform inference on demo_txt/demo_test.txt, print the inference results, and save the averaged accuracy in a text file.
 ### **Inference**
-Simple run this command
+The pretrained model is provided in this [project](https://github.com/SpeechFlow-io/Spoken_language_identification/tree/main/saved_weights/20230228-084356), simple run this command:
 ```
 python predict_by_weights.py
 ```
