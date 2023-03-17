@@ -1,0 +1,9 @@
+tensorflow==2.4.1
+tensorflow-gpu==2.4.1
+tensorflow-addons==0.15.0
+matplotlib==3.5.0
+numpy==1.19.5
+scikit-learn==1.0.1
+librosa==0.8.1
+SoundFile==0.10.3.post1
+PyYAML==6.0

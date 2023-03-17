@@ -1,0 +1,4 @@
+chinese/audio/test/983540233864149941.wav chinese
+chinese/audio/test/9875306761103765169.wav chinese
+chinese/audio/test/992659465919852316.wav chinese
+chinese/audio/test/9952685606966035398.wav chinese

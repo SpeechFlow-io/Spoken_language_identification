@@ -1,0 +1,54 @@
+speech_config:
+  sample_rate: 16000
+  frame_ms: 25
+  stride_ms: 10
+  num_feature_bins: 80
+  feature_type: log_mel_spectrogram
+  preemphasis: 0.97
+  normalize_signal: True
+  normalize_feature: True
+  normalize_per_feature: False
+
+model_config:
+  name: cnn
+  d_model: 64
+  filters: [32,64,64]
+  kernel_size: [[11,5],[11,5],[11,5]]
+  rnn_cell: 256
+  seq_mask: False
+
+dataset_config:
+  vocabulary: vocab/lr_vocab.txt
+  data_path: /home/sd8/LR
+  corpus_name: dat
+  file_nums: 1
+  max_audio_length: 1200
+  max_label_length: 150
+  shuffle_size: 1200
+  subword: True
+  train: train
+  dev: dev
+  test: test
+
+optimizer_config:
+  init_steps: 0
+  warmup_steps: 10000
+  max_lr: 1e-4
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-9
+  sil_weight: 1
+  sil_id: 2
+
+running_config:
+  language: lr
+  data_type: dat
+  prefetch: False
+  is_topk: False
+  is_load: False
+  load_weights: ./saved_weights/lr/20230224-014403/last/model
+  num_epochs: 34
+  batch_size: 128
+  train_steps: 500
+  dev_steps: 20
+  test_steps: 20

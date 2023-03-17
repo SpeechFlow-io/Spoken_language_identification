@@ -1,0 +1,49 @@
+speech_config:
+  sample_rate: 16000
+  frame_ms: 25
+  stride_ms: 10
+  num_feature_bins: 80
+  feature_type: log_mel_spectrogram
+  preemphasis: 0.97
+  normalize_signal: True
+  normalize_feature: True
+  normalize_per_feature: False
+
+model_config:
+  name: acrnn
+  d_model: 64
+  filters: [32,64,64]
+  kernel_size: [[11,5],[11,5],[11,5]]
+  rnn_cell: 256
+  seq_mask: True
+
+dataset_config:
+  vocabulary: vocab/vocab.txt
+  data_path: ./data/wavs/
+  corpus_name: ./data/demo_txt/demo
+  file_nums: 1
+  max_audio_length: 2000
+  shuffle_size: 1200
+  data_length: None
+  suffix: .txt
+  load_type: txt
+  train: train
+  dev: dev
+  test: test
+
+optimizer_config:
+  init_steps: 0
+  warmup_steps: 10000
+  max_lr: 1e-4
+  beta1: 0.9
+  beta2: 0.999
+  epsilon: 1e-9
+
+running_config:
+  prefetch: False
+  load_weights: ./saved_weights/20230228-084356/last/model
+  num_epochs: 100
+  batch_size: 1
+  train_steps: 50
+  dev_steps: 10
+  test_steps: 10
