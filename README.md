@@ -67,13 +67,13 @@ This will train Spoken_language_identification model by data in the 'data/demo_t
 ### **Inference**
 The pretrained model is provided in this [project](https://github.com/SpeechFlow-io/Spoken_language_identification/tree/main/saved_weights/20230228-084356), simple run this command:
 ```
-python predict_by_weights.py test.wav
+python predict_by_weights.py test_audios/chinese.wav
 ```
 or
 ```
-python predict_by_pb.py test.wav
+python predict_by_pb.py test_audios/chinese.wav
 ```
-The provided test.wav audio needs to meet the [Audio Format](#audio-format), if your audio file is not wav format(eg: mp3), you can convert the audio to wav format by ffmpeg. Run the following command in your audio directory convert  to wav format.
+The provided chinese.wav audio needs to meet the [Audio Format](#audio-format), if your audio file is not wav format(eg: mp3), you can convert the audio to wav format by ffmpeg. Run the following command in your audio directory convert  to wav format.
 ```
 ffmpeg -i audio.mp3 -ab 256k -ar 16000 -ac 1 -f wav audio.wav
 ```
