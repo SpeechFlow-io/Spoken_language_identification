@@ -5,7 +5,7 @@ tf.config.set_visible_devices(gpus[0:1], 'GPU')
 from vocab.vocab import Vocab
 import librosa
 import numpy as np
-import time
+import sys
 import os
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score
@@ -24,6 +24,7 @@ def predict_wav(wav_path):
     return output.numpy(), prob.numpy()
 
 
-wav_path = './test.wav'
-predict_wav(wav_path)
+if __name__ == '__main__':
+    wav_path = sys.argv[1]
+    predict_wav(wav_path)
 

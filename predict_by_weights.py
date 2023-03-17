@@ -4,7 +4,7 @@ tf.config.set_visible_devices(gpus[0:1], 'GPU')
 from vocab.vocab import Vocab
 from dataset import create_dataset
 from configs.config import Config
-import numpy as np
+import sys
 from featurizers.speech_featurizers import TFSpeechFeaturizer, NumpySpeechFeaturizer
 from models.model import MulSpeechLR as Model
 import librosa
@@ -24,10 +24,13 @@ lr_model.init_build([None, config.speech_config['num_feature_bins']])
 lr_model.summary()
 
 
-print('*****************************************')
-sample_rate = 16000
-wav_path = 'test.wav'
-signal, _ = librosa.load(wav_path, sr=sample_rate)
-predict, prob = lr_model.predict_pb(signal)
-language = lr_vocab.token_list[predict.numpy()]
-print("predict language={}  prob={:.4f}".format(language, prob.numpy()*100))
+def predict_wav(wav_path):
+    sample_rate = 16000
+    signal, _ = librosa.load(wav_path, sr=sample_rate)
+    predict, prob = lr_model.predict_pb(signal)
+    language = lr_vocab.token_list[predict.numpy()]
+    print("predict language={}  prob={:.4f}".format(language, prob.numpy()*100))
+
+if __name__ == '__main__':
+    wav_path = sys.argv[1]
+    predict_wav(wav_path)

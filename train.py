@@ -4,8 +4,7 @@
 import argparse
 import tensorflow as tf
 gpus = tf.config.list_physical_devices('GPU')
-tf.config.set_visible_devices(gpus[0:1], 'GPU')
-import numpy as np
+# tf.config.set_visible_devices(gpus[0:1], 'GPU')
 import datetime
 import time
 import os
@@ -268,7 +267,7 @@ def train(config_file):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Transformer Punctuation Restoration Model training")
+    parser = argparse.ArgumentParser(description="Spoken_language_identification Model training")
     parser.add_argument("--config_file", type=str, default='./configs/config.yml', help="Config File Path")
     args = parser.parse_args()
     kwargs = vars(args)
