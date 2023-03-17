@@ -55,15 +55,15 @@ The wav files have 16KHz sampling rate, single channel, and 16-bit Signed Intege
 As speech features, 80-dimensional log mel-filterbank outputs were computed from 25ms window for each 10ms. Those log mel-filterbank features were further normalized to have zero mean and unit variance over the training partition of the dataset.
 
 ### **Prepare your input data**
-You must prepare your own data before training the model, refer to data/demo_txt/demo_train.txt. 
+You must prepare your own data before training the model, refer to 'data/demo_txt/demo_train.txt' file.
 
 ### **Train model**
-To get start, please config congfigs/config.yml file,  and simple run this command:
+To get start, please config 'congfigs/config.yml' file,  and simple run this command in the console:
 
 ```
 python train.py
 ```
-This will train Spoken_language_identification model using data/demo_txt/demo_train.txt, then store the model on saved_weights folder, perform inference on demo_txt/demo_test.txt, print the inference results, and save the averaged accuracy in a text file.
+This will train Spoken_language_identification model by data in the 'data/demo_txt/demo_train.txt', then store the model on saved_weights folder, perform inference on 'demo_txt/demo_test.txt', print the inference results, and save the averaged accuracy in a text file.
 ### **Inference**
 The pretrained model is provided in this [project](https://github.com/SpeechFlow-io/Spoken_language_identification/tree/main/saved_weights/20230228-084356), simple run this command:
 ```
