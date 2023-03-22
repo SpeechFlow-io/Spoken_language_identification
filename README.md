@@ -66,7 +66,7 @@ python train.py
 ```
 This will train Spoken_language_identification model by data in the 'data/demo_txt/demo_train.txt', then store the model on saved_weights folder, perform inference on 'demo_txt/demo_test.txt', print the inference results, and save the averaged accuracy in a text file.
 ### **Inference**
-[![ Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16-Nre8aDvn0wN2dsgGa3xUsZ7S61e1h8#scrollTo=7GAiB6YAfECN&line=2&uniqifier=1)
+[![ Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16-Nre8aDvn0wN2dsgGa3xUsZ7S61e1h8#scrollTo=Is60zUMuPqSi)
 
 The pretrained model is provided in this [project](https://github.com/SpeechFlow-io/Spoken_language_identification/tree/main/saved_weights/20230228-084356), simple run this command:
 ```
